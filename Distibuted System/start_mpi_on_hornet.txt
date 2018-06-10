@@ -1,0 +1,4 @@
+module load intelics/2013.1.039-compiler zlib/1.2.8-ics mpi/mvapich2/2.0a-ics
+
+mpicc helloworld.c -o hello
+salloc -n 24 -o output.txt mpirun ./hello
